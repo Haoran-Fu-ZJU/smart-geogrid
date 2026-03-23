@@ -33,6 +33,7 @@ All dependencies are listed in `requirements.txt`.
 └── results/ # Output plots, metrics, and summaries
 ```
 
+---
 
 ## Minimal Manuscript Examples
 
@@ -89,6 +90,8 @@ For CNN workflow: requires data/s.xlsx containing the list of predefined four‑
 Also requires feature files and coordinate file as above.
 
 Outputs per‑combination metrics and a summary Excel file.
+
+---
 
 ## Model Description
 ### Random Forest Classifier (for area classification)
