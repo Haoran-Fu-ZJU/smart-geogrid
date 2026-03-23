@@ -1,0 +1,12 @@
+torch
+numpy<2
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+openpyxl
+xlrd
+optuna
+opencv-python
+pillow
