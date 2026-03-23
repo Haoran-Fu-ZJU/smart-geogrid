@@ -1,5 +1,3 @@
-# Sensor Data Processing & Image Measurement Toolkit
-
 This repository provides a set of tools for processing 36‑channel sensor data, extracting features, and performing both classification (Random Forest) and regression (CNN) tasks. It also includes an interactive visual tool for measuring the area occupied by a stone block in an image.
 
 The workflow is organised as follows:
