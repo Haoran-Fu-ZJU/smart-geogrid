@@ -65,6 +65,7 @@ The script runs Optuna hyperparameter optimisation and displays t‑SNE, feature
 ### CNN – Coordinate Regression
 
 ```Location_Recognition.py```
+
 Requires feature files from feature_extraction.py to be present in data/sensor_features/.
 
 Also requires data/coordinate_set.xlsx with ground‑truth coordinates.
@@ -74,6 +75,7 @@ Outputs training curves, scatter plots, and importance heatmaps.
 ### Sensor Combination Evaluation (Random Forest)
 
 ```Different_sensor_combinations_identification.py```
+
 For Random Forest workflow: uses raw data from class subfolders; no extra input file needed.
 
 Generates 100 four‑sensor combinations, evaluates them, and saves results in results/.
@@ -81,6 +83,7 @@ Generates 100 four‑sensor combinations, evaluates them, and saves results in r
 ### Sensor Combination Evaluation (CNN)
 
 ```Different_sensor_combinations_identification.py```
+
 For CNN workflow: requires data/s.xlsx containing the list of predefined four‑sensor combinations (each row as a string, e.g., "[np.int64(2), np.int64(9), np.int64(18), np.int64(33)]").
 
 Also requires feature files and coordinate file as above.
@@ -89,6 +92,7 @@ Outputs per‑combination metrics and a summary Excel file.
 
 ## Model Description
 ### Random Forest Classifier (for area classification)
+
 Input: Flattened raw time‑series (36 sensors × time points) as a 1D vector.
 
 Hyperparameter optimisation: Optuna with 50 trials, optimising:
