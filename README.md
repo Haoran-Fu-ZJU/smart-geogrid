@@ -31,8 +31,6 @@ All dependencies are listed in `requirements.txt`.
 │ └── s.xlsx
 └── results/ # Output plots, metrics, and summaries
 
----
-
 ## Minimal Manuscript Examples
 
 Below are minimal examples to run each script. Adjust file paths inside the scripts if needed.
