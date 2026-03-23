@@ -86,7 +86,7 @@ Raw Excel files (36 columns, no header) are organised in class subfolders (one f
 - For the combination evaluator, an extra file `s.xlsx` is needed with a column containing sensor‑combination strings (e.g., `"[np.int64(2), np.int64(9), np.int64(18), np.int64(33)]"`).
 
 ---
-
+``` 
 ## Directory Structure
 ├── README.md
 ├── requirements.txt
@@ -101,3 +101,4 @@ Raw Excel files (36 columns, no header) are organised in class subfolders (one f
 │ ├── coordinate_set.xlsx
 │ └── s.xlsx
 └── results/ # Output plots, metrics, and summarie
+``` 
