@@ -1,4 +1,4 @@
-## Overview
+### Overview
 
 This repository provides a set of tools for processing 36‑channel sensor data, extracting features, and performing both classification (Random Forest) and regression (CNN) tasks. It also includes an interactive visual tool for measuring the area occupied by a stone block in an image.
 
@@ -13,7 +13,7 @@ The workflow is organised as follows:
 
 All dependencies are listed in `requirements.txt`.
 
-## Directory Structure
+### Directory Structure
 
 ├── README.md
 ├── requirements.txt
@@ -29,38 +29,35 @@ All dependencies are listed in `requirements.txt`.
 │ └── s.xlsx
 └── results/ # Output plots, metrics, and summaries
 
-## Minimal Manuscript Examples
+### Minimal Manuscript Examples
 
-### 1. Feature Extraction
+## 1. Feature Extraction
 
 python feature_extraction.py
 This reads raw Excel files from the excel folder and saves extracted features to sensor_features.
-2. Visual Area Measurement
-bash
+
+## 2. Visual Area Measurement
 python Visual_identification_of_the_area_occupied_by_the_stone_block.py
 Follow the on‑screen instructions to select the reference squares and the stone region. The computed area will be displayed.
 
-3. Random Forest – Area Classification
-bash
+## 3. Random Forest – Area Classification
 python Random_Forest_for_Area_Classification_and_Recognition.py
 This script trains a Random Forest classifier on raw time‑series data and generates visualisations.
 
-4. CNN – Coordinate Regression
-bash
+## 4. CNN – Coordinate Regression
 python Location_Recognition.py
 This script loads pre‑computed features and trains a CNN to predict (x, y) coordinates.
 
-5. Sensor Combination Evaluation
+## 5. Sensor Combination Evaluation
 For Random Forest (automatic combination generation):
 
-bash
 python Different_sensor_combinations_identification.py
 For CNN (predefined combinations):
 Ensure s.xlsx is present, then run:
 
-bash
 python Different_sensor_combinations_identification.py
-Model Description
+
+### Model Description
 Random Forest – Area Classification
 Input: Raw time‑series (flattened) from 36 sensors.
 
