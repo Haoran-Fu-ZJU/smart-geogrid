@@ -32,7 +32,7 @@ All dependencies are listed in `requirements.txt`.
 ## Minimal Manuscript Examples
 
 ### 1. Feature Extraction
-```bash
+
 python feature_extraction.py
 This reads raw Excel files from the excel folder and saves extracted features to sensor_features.
 2. Visual Area Measurement
