@@ -38,7 +38,7 @@ Below are minimal examples to run each script. Adjust file paths inside the scri
 
 ### Feature Extraction
 
-```bash python feature_extraction.py
+``` python feature_extraction.py```
 Input raw Excel files (36 columns each) should be placed in data/excel/ (or modify the data_folder variable).
 
 Extracted features will be saved in data/sensor_features/.
