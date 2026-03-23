@@ -13,7 +13,7 @@ The workflow is organised as follows:
 
 All dependencies are listed in `requirements.txt`.
 
-### Directory Structure
+# Directory Structure
 
 ├── README.md
 ├── requirements.txt
@@ -29,7 +29,7 @@ All dependencies are listed in `requirements.txt`.
 │ └── s.xlsx
 └── results/ # Output plots, metrics, and summaries
 
-### Minimal Manuscript Examples
+# Minimal Manuscript Examples
 
 ## 1. Feature Extraction
 
@@ -57,8 +57,8 @@ Ensure s.xlsx is present, then run:
 
 python Different_sensor_combinations_identification.py
 
-### Model Description
-Random Forest – Area Classification
+# Model Description
+## Random Forest – Area Classification
 Input: Raw time‑series (flattened) from 36 sensors.
 
 Model: Random Forest classifier with hyperparameter optimisation using Optuna.
@@ -67,7 +67,7 @@ Output: t‑SNE visualisation, feature importance bar chart, confusion matrix.
 
 Sensor combination evaluation: Per‑sensor importance is computed (averaged over the 14 features). 100 combinations of 4 sensors are generated (top‑4 plus random replacements). Each combination is trained and evaluated with the same Random Forest pipeline. Results include confusion matrices (PNG), accuracy distribution plot, and a summary CSV (top4_sensor_combination_results.csv).
 
-CNN – Coordinate Regression
+## CNN – Coordinate Regression
 Input: Feature files from feature_extraction.py (14 features per sensor → 504 features total).
 
 Model: Convolutional Neural Network (CNN) with data augmentation (noise, scaling, shifting). The model predicts continuous (x, y) coordinates.
