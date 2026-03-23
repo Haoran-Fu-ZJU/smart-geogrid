@@ -13,8 +13,6 @@ The workflow is organised as follows:
 
 All dependencies are listed in `requirements.txt`.
 
----
-
 ## Directory Structure
 
 ├── README.md
@@ -30,8 +28,6 @@ All dependencies are listed in `requirements.txt`.
 │ ├── coordinate_set.xlsx
 │ └── s.xlsx
 └── results/ # Output plots, metrics, and summaries
-
----
 
 ## Minimal Manuscript Examples
 
