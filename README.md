@@ -40,7 +40,7 @@ Below are minimal examples to run each script. Adjust file paths inside the scri
 
 ### Feature Extraction
 
-```python feature_extraction.py```
+```feature_extraction.py```
 
 Input raw Excel files (36 columns each) should be placed in data/excel/ (or modify the data_folder variable).
 
