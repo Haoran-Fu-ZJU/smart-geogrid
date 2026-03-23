@@ -9,10 +9,7 @@ The workflow is organised as follows:
    - **CNN Regression** – Predict (x, y) coordinates from sensor features.  
    - **Sensor Combination Evaluation** – Assess the performance of different 4‑sensor layouts.
 
-All dependencies are listed in `requirements.txt`. Install them with:
-
-```bash
-pip install -r requirements.txt
+All dependencies are listed in `requirements.txt`.
 
 1. Feature Extraction
 Script: feature_extraction.py
