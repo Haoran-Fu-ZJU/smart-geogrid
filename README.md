@@ -16,6 +16,7 @@ All dependencies are listed in `requirements.txt`.
 ---
 
 ## Directory Structure
+```
 ├── README.md
 ├── requirements.txt
 ├── feature_extraction.py
