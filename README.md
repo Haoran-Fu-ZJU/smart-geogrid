@@ -37,28 +37,28 @@ All dependencies are listed in `requirements.txt`.
 Below are minimal examples to run each script. Adjust file paths inside the scripts if needed.
 
 ### Feature Extraction
-```
+
 python feature_extraction.py
 Input raw Excel files (36 columns each) should be placed in data/excel/ (or modify the data_folder variable).
 
 Extracted features will be saved in data/sensor_features/.
 
-Visual Area Measurement
-bash
+### Visual Area Measurement
+
 python Visual_identification_of_the_area_occupied_by_the_stone_block.py
 Follow the interactive prompts: first select the reference region (5 mm × 5 mm squares), then select the stone region.
 
 The result (area in mm²) will be displayed on screen.
 
-Random Forest – Area Classification
-bash
+### Random Forest – Area Classification
+
 python Random_Forest_for_Area_Classification_and_Recognition.py
 Raw Excel files (36 columns) must be organised in class subfolders under data/excel/ (or modify base_path).
 
 The script runs Optuna hyperparameter optimisation and displays t‑SNE, feature importance, and confusion matrix.
 
-CNN – Coordinate Regression
-bash
+### CNN – Coordinate Regression
+
 python Location_Recognition.py
 Requires feature files from feature_extraction.py to be present in data/sensor_features/.
 
@@ -66,15 +66,15 @@ Also requires data/coordinate_set.xlsx with ground‑truth coordinates.
 
 Outputs training curves, scatter plots, and importance heatmaps.
 
-Sensor Combination Evaluation (Random Forest)
-bash
+### Sensor Combination Evaluation (Random Forest)
+
 python Different_sensor_combinations_identification.py
 For Random Forest workflow: uses raw data from class subfolders; no extra input file needed.
 
 Generates 100 four‑sensor combinations, evaluates them, and saves results in results/.
 
-Sensor Combination Evaluation (CNN)
-bash
+### Sensor Combination Evaluation (CNN)
+
 python Different_sensor_combinations_identification.py
 For CNN workflow: requires data/s.xlsx containing the list of predefined four‑sensor combinations (each row as a string, e.g., "[np.int64(2), np.int64(9), np.int64(18), np.int64(33)]").
 
@@ -82,8 +82,8 @@ Also requires feature files and coordinate file as above.
 
 Outputs per‑combination metrics and a summary Excel file.
 
-Model Description
-Random Forest Classifier (for area classification)
+## Model Description
+### Random Forest Classifier (for area classification)
 Input: Flattened raw time‑series (36 sensors × time points) as a 1D vector.
 
 Hyperparameter optimisation: Optuna with 50 trials, optimising:
@@ -98,7 +98,7 @@ Evaluation: Accuracy, confusion matrix (percentage), feature importance (average
 
 Visualisation: t‑SNE projection of the feature space, top‑50 feature importance bar chart.
 
-CNN Regressor (for coordinate prediction)
+### CNN Regressor (for coordinate prediction)
 Input: 504 features (36 sensors × 14 statistical/spectral features).
 
 Architecture:
@@ -117,7 +117,7 @@ Feature importance: Calculated by permuting each feature and measuring the incre
 
 Outputs: Training/validation loss curves, scatter plot of predicted vs. true coordinates with 95% confidence intervals, importance heatmap.
 
-Sensor Combination Evaluation
+### Sensor Combination Evaluation
 For Random Forest: The script evaluates 100 four‑sensor combinations (top‑4 most important sensors plus 99 variants where one sensor is randomly replaced). For each combination, a Random Forest is trained and tested.
 
 For CNN: A user‑provided list of four‑sensor combinations is evaluated. Each combination uses the selected sensors’ features (4 sensors × 14 features = 56 features) to train a CNN. Additionally, a second CNN is trained on the top‑50 most important features (determined from the full‑sensor importance analysis).
