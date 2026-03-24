@@ -112,7 +112,6 @@ Data loading:
 Loads Excel files from subfolders under sensor_features (each subfolder name corresponds to a class label).
 
 Hyperparameter optimisation:
-
 Bayesian optimisation with Optuna (50 trials) to maximise the 5‑fold cross‑validation accuracy of a random forest classifier。
 
 Model training:
