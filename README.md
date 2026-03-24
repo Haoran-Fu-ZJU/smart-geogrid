@@ -35,7 +35,7 @@ All dependencies are listed in `requirements.txt`.
 
 ---
 
-## Minimal Manuscript Examples
+## Minimal Runnable Examples
 
 Below are minimal examples to run each script. Adjust file paths inside the scripts if needed.
 Some raw data used in the manuscript are not included in this repository because of file size limits and were uploaded separately during manuscript submission.  
