@@ -120,7 +120,9 @@ A final random forest classifier is trained on the full training set using the b
 Evaluation:
 
 Accuracy on the held‑out test set (20% stratified split).
+
 Classification report (precision, recall, f1‑score per class).
+
 Confusion matrix plotted as percentages to visualise per‑class misclassification rates.
 
 Visualisation:
