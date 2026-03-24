@@ -108,40 +108,27 @@ Outputs per‑combination metrics and a summary Excel file.
 ## Model Description
 ### Random Forest Classifier (for area classification)
 
-Input: Flattened raw time‑series (36 sensors × time points) as a 1D vector.
+Input: Flattened raw time‑series data (each sample from one Excel file).
 
-Hyperparameter optimisation: Optuna with 50 trials, optimising:
+Hyperparameter optimisation: Optuna with 50 trials.
 
-n_estimators: number of trees (50–300)
-
-max_depth: tree depth (5–50)
-
-min_samples_split and min_samples_leaf
-
-Evaluation: Accuracy, confusion matrix (percentage), feature importance (averaged per sensor).
+Evaluation: Accuracy, confusion matrix (percentage), feature importance (top‑50 per‑sensor per‑feature).
 
 Visualisation: t‑SNE projection of the feature space, top‑50 feature importance bar chart.
 
 ### CNN Regressor (for coordinate prediction)
 Input: 504 features (36 sensors × 14 statistical/spectral features).
 
-Architecture:
+Architecture: Three convolutional layers (1D) with ReLU and max pooling, followed by flattening and two fully connected layers (512*1 → 256 → 2).
+Loss: Custom loss combining MSE, correlation loss, and individual coordinate MSE.
 
-Two convolutional layers (1D) with batch normalisation and dropout.
+Data augmentation: Additive noise, scaling, and shifting applied to the feature matrix during training.
 
-Global average pooling.
+Feature importance: Calculated from convolutional layer weights; top‑50 features are selected for a second training round using a simplified CNN.
 
-Two fully connected layers (64 → 2) with ReLU activations.
-
-Loss: Mean squared error (MSE) for (x, y) coordinates.
-
-Data augmentation: Additive noise, scaling, and time‑shifting applied to the feature matrix during training.
-
-Feature importance: Calculated by permuting each feature and measuring the increase in MSE; top‑50 features are used for a second training round.
-
-Outputs: Training/validation loss curves, scatter plot of predicted vs. true coordinates with 95% confidence intervals, importance heatmap.
+Outputs: Training/validation loss curves, scatter plot of predicted vs. true coordinates with 95% confidence intervals, feature importance heatmap.
 
 ### Sensor Combination Evaluation
 For Random Forest: The script evaluates 100 four‑sensor combinations (top‑4 most important sensors plus 99 variants where one sensor is randomly replaced). For each combination, a Random Forest is trained and tested.
 
-For CNN: A user‑provided list of four‑sensor combinations is evaluated. Each combination uses the selected sensors’ features (4 sensors × 14 features = 56 features) to train a CNN. Additionally, a second CNN is trained on the top‑50 most important features (determined from the full‑sensor importance analysis).
+For CNN: A user‑provided list of four‑sensor combinations is evaluated. Each combination uses the selected sensors’ features (4 sensors × 14 features = 56 features) to train a CNN.
