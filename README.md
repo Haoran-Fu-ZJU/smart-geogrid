@@ -29,7 +29,7 @@ All dependencies are listed in `requirements.txt`.
 │ ├── excel/ # Raw sensor Excel files
 │ ├── sensor_features/ # Extracted feature files
 │ ├── coordinate_set.xlsx
-│ └── Sensor_combination.xlsx
+│ └── sensor_combination.xlsx
 └── results/ # Output plots, metrics, and summaries
 ```
 
@@ -97,7 +97,7 @@ Generates 100 four‑sensor combinations, evaluates them, and saves results in r
 Different_sensor_combinations_identification.py
 ```
 
-For CNN workflow: requires data/s.xlsx containing the list of predefined four‑sensor combinations (each row as a string, e.g., "[np.int64(2), np.int64(9), np.int64(18), np.int64(33)]").
+For CNN workflow: requires data/sensor_combination.xlsx containing the list of predefined four‑sensor combinations (each row as a string, e.g., "[np.int64(2), np.int64(9), np.int64(18), np.int64(33)]").
 
 Also requires feature files and coordinate file as above.
 
