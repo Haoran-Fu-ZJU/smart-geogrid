@@ -43,7 +43,8 @@ Please prepare the required input files and update file paths in the scripts if 
 
 ### Feature Extraction
 
-```feature_extraction.py```
+```bash
+python feature_extraction.py
 
 Input raw Excel files (36 columns each) should be placed in data/excel/ (or modify the data_folder variable).
 
