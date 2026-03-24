@@ -38,6 +38,8 @@ All dependencies are listed in `requirements.txt`.
 ## Minimal Manuscript Examples
 
 Below are minimal examples to run each script. Adjust file paths inside the scripts if needed.
+ome raw data used in the manuscript are not included in this repository because of file size limits and were uploaded separately during manuscript submission.  
+Please prepare the required input files and update file paths in the scripts if needed.
 
 ### Feature Extraction
 
