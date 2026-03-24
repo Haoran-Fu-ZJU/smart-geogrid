@@ -29,7 +29,7 @@ All dependencies are listed in `requirements.txt`.
 │ ├── excel/ # Raw sensor Excel files
 │ ├── sensor_features/ # Extracted feature files
 │ ├── coordinate_set.xlsx
-│ └── s.xlsx
+│ └── Sensor_combination.xlsx
 └── results/ # Output plots, metrics, and summaries
 ```
 
