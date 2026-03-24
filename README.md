@@ -108,12 +108,28 @@ Outputs per‑combination metrics and a summary Excel file.
 ## Model Description
 ### Random Forest Classifier (for area classification)
 
-Input: Flattened raw time‑series data (each sample from one Excel file).
+Data loading:
+Loads Excel files from subfolders under sensor_features (each subfolder name corresponds to a class label).
 
-Hyperparameter optimisation: Optuna with 50 trials.
+Hyperparameter optimisation:
 
-Evaluation: Accuracy, confusion matrix (percentage), feature importance (top‑50 per‑sensor per‑feature).
+Bayesian optimisation with Optuna (50 trials) to maximise the 5‑fold cross‑validation accuracy of a random forest classifier。
 
+Model training:
+A final random forest classifier is trained on the full training set using the best hyperparameters found by Optuna.
+
+Evaluation:
+Accuracy on the held‑out test set (20% stratified split).
+
+Classification report (precision, recall, f1‑score per class).
+
+Confusion matrix plotted as percentages to visualise per‑class misclassification rates.
+
+Visualisation:
+
+t‑SNE projection: Dimensionality reduction of the training feature space to 2D, coloured by class, to assess separability.
+
+Feature importance: Bar chart showing the top‑50 most important features (each feature corresponds to a specific sensor and statistical/spectral descriptor, e.g., “Sensor 1 mean”). Importance is derived from the random forest’s built‑in feature_importances_ attribute.
 Visualisation: t‑SNE projection of the feature space, top‑50 feature importance bar chart.
 
 ### CNN Regressor (for coordinate prediction)
