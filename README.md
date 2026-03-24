@@ -67,7 +67,8 @@ The script runs Optuna hyperparameter optimisation and displays t‑SNE, feature
 
 ### CNN – Coordinate Regression
 
-```Location_Recognition.py```
+```bash
+python Location_Recognition.py
 
 Requires feature files from feature_extraction.py to be present in data/sensor_features/.
 
