@@ -51,8 +51,9 @@ Input raw Excel files (36 columns each) should be placed in data/excel/ (or modi
 Extracted features will be saved in data/sensor_features/.
 
 ### Visual Area Measurement
-
-```Visual_identification_of_the_area_occupied_by_the_stone_block.py```
+```bash
+python Visual_identification_of_the_area_occupied_by_the_stone_block.py
+```
 
 Follow the interactive prompts: first select the reference region (5 mm × 5 mm squares), then select the stone region.
 
@@ -60,7 +61,9 @@ The result (area in mm²) will be displayed on screen.
 
 ### Random Forest – Area Classification
 
-```Random_Forest_for_Area_Classification_and_Recognition.py```
+```bash
+python Random_Forest_for_Area_Classification_and_Recognition.py
+```
 
 Raw Excel files (36 columns) must be organised in class subfolders under data/excel/ (or modify base_path).
 
@@ -70,6 +73,7 @@ The script runs Optuna hyperparameter optimisation and displays t‑SNE, feature
 
 ```bash
 python Location_Recognition.py
+```
 
 Requires feature files from feature_extraction.py to be present in data/sensor_features/.
 
@@ -79,7 +83,9 @@ Outputs training curves, scatter plots, and importance heatmaps.
 
 ### Sensor Combination Evaluation (Random Forest)
 
-```Different_sensor_combinations_identification.py```
+```bash
+Different_sensor_combinations_identification.py
+```
 
 For Random Forest workflow: uses raw data from class subfolders; no extra input file needed.
 
@@ -87,7 +93,9 @@ Generates 100 four‑sensor combinations, evaluates them, and saves results in r
 
 ### Sensor Combination Evaluation (CNN)
 
-```Different_sensor_combinations_identification.py```
+```bash
+Different_sensor_combinations_identification.py
+```
 
 For CNN workflow: requires data/s.xlsx containing the list of predefined four‑sensor combinations (each row as a string, e.g., "[np.int64(2), np.int64(9), np.int64(18), np.int64(33)]").
 
